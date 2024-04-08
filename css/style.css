@@ -1,0 +1,1078 @@
+:root {
+  --font-family: "Lato";
+  --second-family: "Rufina";
+  --third-family: "Inter", sans-serif;
+  --000000: #000;
+  --4d4d4d: #4d4d4d;
+  --233000: #233000;
+  --5e6600: #5e6600;
+  --9caa00: #9caa00;
+  --ebf0e4: #ebf0e4;
+  --b0b0b0: #b0b0b0;
+  --ffffff: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  animation: pulse;
+  animation-duration: 0.5s
+}
+
+a:active {
+  animation: fadeOut;
+  animation-duration: 1s
+}
+
+ul {
+  list-style: none;
+}
+
+body,
+button,
+ul,
+img,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+button:active {
+  transform: scale(0.8, 0.8);
+}
+
+header {
+  background-color: var(--233000);
+  padding: 46px 0;
+}
+
+.container {
+  max-width: 1674px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__item {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.btn-burger {
+  width: 94px;
+  height: 71px;
+  border: none;
+  color: inherit;
+  background-color: inherit;
+  background-image: url(../img/NaviOpen.svg);
+}
+
+.nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  padding: 5% 10%;
+  background-image: url(../img/nav.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.nav_active {
+  display: block;
+}
+
+.btn-close {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background-color: inherit;
+  background-image: url(../img/Union.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  right: 10%;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+
+}
+
+.nav__link {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 66px;
+  text-transform: uppercase;
+  color: var(--ffffff);
+}
+
+.nav__link:hover {
+  color: var(--233000);
+}
+
+.phone-number {
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 26px;
+  color: var(--ffffff);
+}
+
+.reserv {
+  border: 2px solid var(--ffffff);
+  padding: 20px 46px;
+  width: 285px;
+  height: 88px;
+  background-color: inherit;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--ffffff);
+}
+
+.section {
+  padding: 150px 0;
+}
+
+.section_hero-background {
+  background-color: #233000;
+  padding-top: 100px;
+}
+
+.hero__heading {
+  max-width: 1057px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 148px;
+  line-height: 103%;
+  color: var(--ffffff);
+  margin-bottom: 50px;
+}
+
+.hero__text {
+  max-width: 565px;
+  margin-bottom: 760px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: var(--ffffff);
+}
+
+.container_hero-background {
+  background-image: url(../img/HeroBack.png);
+  background-repeat: no-repeat;
+  background-position: top 20% right;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero__left {
+  max-width: 792px;
+}
+
+.hero__img,
+.hero__subheading,
+.hero__text_margin {
+  margin-bottom: 54px;
+}
+
+.hero__subheading {
+  max-width: 493px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 124%;
+  color: var(--ffffff);
+}
+
+.hero__right {
+  width: 508px;
+}
+
+.section__menu-margin {
+  padding-bottom: 50px;
+}
+
+.container_background-position {
+  position: relative;
+}
+
+.menu__background {
+  position: absolute;
+  top: -25%;
+  right: 0;
+  z-index: -1;
+}
+
+.menu__heading {
+  max-width: 532px;
+  margin-bottom: 158px;
+}
+
+.sec-heading {
+  margin-bottom: 18px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 108px;
+  line-height: 111%;
+  color: var(--000000);
+}
+
+.sec-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: var(--4d4d4d);
+}
+
+.menu__list,
+.cook__list,
+.ingredients__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu__item {
+  width: 792px;
+  margin-bottom: 100px;
+}
+
+.menu__price {
+  display: block;
+  border-bottom: 1px dashed;
+  margin-bottom: 36px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 133%;
+  text-align: right;
+  color: var(--000000);
+}
+
+.menu__name-dish {
+  margin-bottom: 24px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 124%;
+  color: var(--000000);
+}
+
+.container_cook-background {
+  background-image: url(../img/secBack2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.section_cook-background {
+  background-color: var(--ebf0e4);
+}
+
+.cook__left {
+  width: 952px;
+  height: 933px;
+  background-image: url(../img/cook.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.cook__right {
+  width: 649px;
+}
+
+.ingredients__item {
+  width: 500px;
+  display: flex;
+  gap: 39px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ingredient__img {
+  width: 260px;
+  height: 260px;
+  border-radius: 100%;
+  padding: 50px;
+  background-color: var(--ebf0e4);
+}
+
+.sec-subheading {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 133%;
+  text-align: center;
+  color: var(--000000);
+}
+
+.sec-text__ingredients_aling {
+  text-align: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.blog__desc {
+  padding: 75px;
+}
+
+.sec-subheading_aling {
+  text-align: left;
+  border-bottom: 1px dashed;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+.sec-text_pading {
+  padding-bottom: 46px;
+}
+
+.blog__more {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: var(--000000);
+  transition: 0.5s;
+}
+
+.blog__more::after {
+  content: url(../img/Icon_arrow-right.svg);
+  padding-left: 12px;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.blog__more:hover::after {
+  content: url(../img/Icon_arrow-right.svg);
+  padding-left: 50px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.section_form-background {
+  background-color: var(--ebf0e4);
+}
+
+.sec-heading_form-aling {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.sec-text_form-aling {
+  margin-bottom: 133px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.form__box {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.form__input {
+  border: 2px solid var(--000000);
+  padding: 30px 40px;
+  width: 516px;
+  height: 96px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: var(--000000);
+}
+
+.form__label-custom {
+  position: relative;
+  padding-left: 20px;
+}
+
+.form__checkbox {
+  display: none;
+  position: absolute;
+  appearance: none;
+}
+
+.form__checkbox__span {
+  padding-left: 30px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  color: var(--000000);
+}
+
+.form__checkbox__span::after {
+  content: "";
+  transition: 0.3s;
+  width: 35px;
+  position: absolute;
+  left: 0;
+  height: 35px;
+  border: 1px solid var(--000000);
+  border-radius: 10px;
+}
+
+.form__checkbox:checked + .form__checkbox__span::after {
+  border: 1px solid #141024;
+}
+
+.form__checkbox__span::before {
+  content: "\1F44D";
+  position: absolute;
+  left: -1px;
+  opacity: 0;
+  font-size: 28px;
+  transition: 0.3s;
+}
+
+.form__checkbox:checked + .form__checkbox__span::before {
+  opacity: 1;
+  transform: rotate(360deg);
+}
+
+.form__btn {
+  border: 2px solid var(--000000);
+  padding: 20px 46px;
+  width: 344px;
+  height: 88px;
+  background: var(--233000);
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--ffffff);
+}
+
+.form__btn:hover {
+  background: #fff;
+  color: #d52027;
+  transition: 0.3s;
+}
+
+.form__btn:active {
+  transform: scale(0.8, 0.8);
+}
+
+.section_footer-background {
+  background: var(--233000);
+}
+
+.footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__item {
+  max-width: 200px;
+}
+
+.footer__heading {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 68px;
+  color: var(--ffffff);
+}
+
+.footer__subheading {
+  margin-bottom: 55px;
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 150%;
+  color: var(--ffffff);
+}
+
+.footer__text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 139%;
+  letter-spacing: 0.02em;
+  color: var(--ffffff);
+}
+
+.footer__text_margin {
+  display: block;
+  margin-bottom: 28px;
+}
+
+.footer__link {
+  display: block;
+  margin-bottom: 28px;
+}
+
+
+
+.header_menu-padding {
+padding: 0;
+}
+
+.container__menu-background {
+background-image: url(../img/menu-header.jpg);
+background-repeat: no-repeat;
+background-size: contain;
+padding: 46px 15px;
+}
+
+.header__list__menu {
+margin-bottom: 200px;
+}
+
+.hero__text_menu-margin {
+  margin-bottom: 130px;
+}
+
+.sec-heading_menu_aling,
+.sec-text_menu_aling {
+  text-align: center;
+}
+
+.sec-text_menu_aling {
+  margin-bottom: 81px;
+}
+
+.menu__right {
+  display: flex;
+  gap: 58px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu__left {
+  display: flex;
+  justify-content: center;
+}
+
+.menu__card {
+width: 710px;
+}
+
+@media (max-width: 1024px) {
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .logo {
+    width: 80%;
+  }
+
+  .section_hero-background {
+    padding-top: 70px;
+  }
+
+  .container_hero-background {
+    background-size:contain;
+    background-position: top 5% right;
+  }
+
+  .hero__heading {
+    max-width: 650px;
+    font-size: 80px;
+  }
+
+  .sec-heading {
+    font-size: 70px;
+  }
+
+  .sec-text {
+    font-size: 20px;
+  }
+
+  .menu__background {
+    top: -10%;
+  }
+
+  .menu__heading {
+    margin-bottom: 100px;
+  }
+
+  .cook__list,
+  .ingredients__list {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .menu__item {
+    width: 480px;
+    margin-bottom: 40px;
+  }
+
+  .menu__price {
+    font-size: 38px;
+  }
+
+  .menu__name-dish {
+    font-size: 58px;
+  }
+
+  .container_cook-background {
+    background-size: contain;
+  }
+
+  .cook__left {
+    width: 752px;
+    height: 733px;
+    background-size: contain;
+  }
+
+  .ingredients__item {
+    width: 350px;
+    gap: 29px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ingredient__img {
+    width: 160px;
+    height: 160px;
+    padding: 30px;
+  }
+
+  .swiper__img {
+    width: 90%;
+    height: 90%;
+  }
+
+  .blog__desc {
+    padding: 25px;
+  }
+
+  .sec-subheading {
+    font-size: 38px;
+  }
+
+  .sec-subheading_aling {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .sec-text_pading {
+    padding-bottom: 26px;
+  }
+
+  .sec-text_form-aling {
+    margin-bottom: 60px;
+  }
+
+  .form {
+    gap: 10px;
+  }
+
+  .form__box {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .form__input {
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .form__btn {
+    padding: 10px 46px;
+    width: 344px;
+    height: 58px;
+    font-size: 24px;
+  }
+
+
+  .container__menu-background {
+    padding: 30px 15px;
+    }
+    
+    .header__list__menu {
+    margin-bottom: 80px;
+    }
+    
+    .hero__text_menu-margin {
+      margin-bottom: 90px;
+    }
+        
+    .sec-text_menu_aling {
+      margin-bottom: 81px;
+    }
+    
+    .menu__right {
+      display: flex;
+      gap: 58px;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .menu__list {
+      justify-content: center;
+    }
+    
+    .menu__left {
+      display: none;
+    }
+    
+    .menu__card {
+    width: 900px;
+    }
+}
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 40px 0;
+  }
+
+  header {
+    padding: 26px 0;
+  }
+
+  .header__item {
+    gap: 10px;
+  }
+
+  .logo {
+    width: 60%;
+  }
+
+  .phone-number {
+    display: none;
+  }
+
+  .reserv {
+    border: 2px solid var(--ffffff);
+    padding: 5px 10px;
+    width: 185px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .hero__text {
+    margin-bottom: 390px;
+  }
+
+  .hero__img_mob {
+    display: none;
+  }
+
+  .hero__img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .hero__img,
+  .hero__subheading,
+  .hero__text_margin {
+     margin-bottom: 24px;
+  }
+
+  .sec-heading {
+    font-size: 60px;
+  }
+
+  .menu__heading {
+    margin-bottom: 50px;
+  }
+
+  .menu__list {
+    justify-content: center;
+  }
+
+  .menu__item {
+    width: 450px;
+    margin-bottom: 70px;
+  }
+
+  .menu__price {
+    margin-bottom: 25px;
+    font-size: 38px;
+  }
+
+  .menu__name-dish {
+    margin-bottom: 15px;
+    font-size: 40px;
+  }
+
+
+  .container__menu-background {
+    padding: 20px 15px;
+    }
+    
+    .header__list__menu {
+    margin-bottom: 50px;
+    }
+    
+    .hero__text_menu-margin {
+      margin-bottom: 20px;
+    }
+        
+    .sec-text_menu_aling {
+      margin-bottom: 60px;
+    }
+    
+    .menu__right {
+      gap: 40px;
+    }
+       
+    .menu__card {
+    width: 700px;
+    }
+}
+
+@media (max-width: 375px) {
+
+  .section {
+    padding: 30px 0;
+  }
+
+  header {
+    padding: 20px 0;
+  }
+
+  .header__item {
+    gap: 10px;
+  }
+
+  .logo__link {
+    width: 100px;
+  }
+
+  .btn-burger {
+    width: 44px;
+    height: 41px;
+    border: none;
+    background-color: inherit;
+    background-image: url(../img/NaviOpen.svg);
+    background-size: contain;
+  }
+
+  .logo {
+    width: 90%;
+    height: 90%;
+  }
+
+  .phone-number {
+    display: none;
+  }
+
+  .reserv {
+    padding: 5px 5px;
+    width: 95px;
+    height: 48px;
+    font-size: 13px;
+  }
+
+  .hero__heading {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+
+  .hero__text {
+    font-size: 14px;
+    margin-bottom: 180px;
+  }
+
+  .hero__img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .hero__img,
+  .hero__subheading,
+  .hero__text_margin {
+     margin-bottom: 25px;
+  }
+
+  .hero__subheading {
+    font-size: 26px;
+  }
+
+  .sec-heading {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .sec-text {
+    font-size: 14px;
+  }
+
+  .menu__heading {
+    margin-bottom: 50px;
+  }
+
+  .menu__item {
+    width: 290px;
+    margin-bottom: 30px;
+  }
+
+  .menu__price {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .menu__name-dish {
+    margin-bottom: 15px;
+    font-size: 22px;
+  }
+
+  .cook__left {
+    width: 280px;
+    height: 300px;
+    background-position: center;
+  }
+
+  .cook__list,
+  .ingredients__list {
+    gap: 20px;
+  }
+
+  .ingredient__img {
+    width: 120px;
+    height: 120px;
+    padding: 25px;
+  }
+
+  .sec-subheading {
+    font-size: 22px;
+  }
+
+  .swiper__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .blog__desc {
+    padding: 10px;
+  }
+
+  .sec-subheading_mob {
+    height: 90px;
+    font-size: 20px;
+  }
+
+  .blog__more {
+    font-size: 12px;
+  }
+
+  .blog__more::after {
+    content: "";
+  }
+
+  .form__input {
+    padding: 20px 10px;
+    width: 280px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .form__checkbox__span {
+    font-size: 20px;
+  }
+
+  .form__btn {
+    padding: 10px 46px;
+    width: 280px;
+    height: 58px;
+    font-size: 20px;
+  }
+
+  .footer__list {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer__heading {
+    font-size: 40px;
+  }
+
+  .nav__link {
+    font-size: 35px;
+  }
+
+  .btn-close {
+    width: 30px;
+    height: 30px;
+  }
+
+  .container__menu-background {
+    padding: 20px 15px;
+    }
+    
+    .header__list__menu {
+    margin-bottom: 30px;
+    }
+    
+    .hero__text_menu-margin {
+      margin-bottom: 5px;
+    }
+        
+    .sec-text_menu_aling {
+      margin-bottom: 40px;
+    }
+    
+    .menu__right {
+      gap: 40px;
+    }
+       
+    .menu__card {
+    width: 320px;
+    }
+}
